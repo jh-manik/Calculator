@@ -1,0 +1,98 @@
+<!DOCTYPE HTML>
+<html class="no-js" lang="en-us">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="author" content="the_mechanic">
+    <meta name="description" content="A Simple Calculator App with HTML, CSS & JavaScript">
+    <link rel="manifest" href="./icons/site.webmanifest">
+    <!-- Favicon -->
+    <link rel="apple-touch-icon" href="icons/apple-touch-icon.png">
+    <link rel="android-chrome-icon" href="icons/android-chrome-192x192.png">
+    <link rel="android-chrome-icon" href="icons/android-chrome-512x512.png">
+    <link rel="icon" href="icons/favicon-16x16.png">
+    <link rel="icon" href="icons/favicon-32x32.png">
+    <link rel="icon" href="icons/favicon.ico">
+    <title>Simple Calculator App</title>
+    <!-- Font-Awesome Icon CDN -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+    <link rel="stylesheet" href="./style.css">
+</head> 
+<body>
+
+	<header class="app-header">
+		<div class="container">
+			<h1 class="txt-center app-title">
+				Simple Calulator
+			</h1>
+		</div> <!-- ./ container -->
+	</header> <!-- ./ app-header -->
+
+	<main class="app-body">
+		<div class="container">
+			<div class="flex-container calContainer">
+					<!-- Start of App Main Section -->
+					<div class="calculator">
+						<div class="displayScreen">
+							<div class="previous"></div>
+							<div class="current">0</div>
+						</div> <!-- ./ displayScreen -->
+
+						<div class="sectionButton">
+							<button class="ac">AC</button>
+				            <button class="delete">DEL</button>
+				            <button class="operation" data-operation="÷">÷</button>
+				            <button class="operation" data-operation="*">×</button>
+				            <button data-number="7">7</button>
+				            <button data-number="8">8</button>
+				            <button data-number="9">9</button>
+				            <button class="operation" data-operation="-">-</button>
+				            <button data-number="4">4</button>
+				            <button data-number="5">5</button>
+				            <button data-number="6">6</button>
+				            <button class="operation" data-operation="+">+</button>
+				            <button data-number="1">1</button>
+				            <button data-number="2">2</button>
+				            <button data-number="3">3</button>
+				            <button data-number=".">.</button>
+				            <button data-number="0">0</button>
+				            <button class="equals">=</button>
+						</div> <!-- ./ sectionButton -->
+					</div> <!-- ./ calulator -->
+					<!-- End of App Main Section -->				
+			</div> <!-- ./ flex-container calContainer -->
+		</div> <!-- ./ container -->
+	</main> <!-- ./ app-body -->
+
+	<footer class="app-footer">
+		<div class="container">
+			<div class="grid-container">
+				<div class="copyright">
+					<p>&copy; 2025. All Rights Reserved.</p>
+				</div> <!-- ./ copyright -->
+
+				<div class="social-link">
+					<h3 class="section-heading">Follow me on Facebook and GitHub</h3>
+					<ul class="flex-container">
+						<li><a href="https://www.facebook.com/jhmanik0/"><i class="fa-brands fa-square-facebook"></i></a></li>
+						<li><a href="https://github.com/jh-manik"><i class="fa-brands fa-square-github"></i></a></li>
+					</ul>
+				</div> <!-- ./ social-link -->
+
+				<div class="author-text">
+					<p>Made with <span class="iconHeart">
+						<i class="fa-solid fa-heart"></i>
+					</span> and Designed by <span class="author">
+						<a href="https://www.facebook.com/jhmanik0/" class="author-link">the_mechanic</a>
+					</span></p>
+				</div> <!-- ./ author-text -->
+			</div> <!-- ./ grid-container -->
+		</div> <!-- ./ container -->
+	</footer> <!-- ./ app-footer -->
+
+	<!-- App JavaScript FIle Loding -->
+	<script type="text/javascript" src="./app.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,237 @@
+:root {
+	--font-primary: 'Fira Sans', 'Helvetica Neue', Verdana, Arial, sans-serif;
+	--font-secondary: 'Quicksand', 'Helvetica Neue', Verdana, Arial, sans-serif;
+	--color-primary: #4da1a9;
+	--color-secondary: #79d7be;
+	--color-dark: #2e5077;
+	--color-light: #f8fafc;
+	--color-white: #f9f9f9;
+	--color-text: #212121;
+}
+
+/***** Default Style of the App *****/
+*::before,
+*::after,
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+html {
+	background-color: var(--color-white);
+}
+
+body {
+	width: 100%;
+	min-height: 100vh;
+	font: normal normal 100%/1.65em var(--font-primary);
+	color: var(--color-dark);
+}
+
+.container {
+	width: 80%;
+	height: auto;
+	margin: 0 auto;
+	padding: 0 1.25em;
+}
+
+.flex-container { display: flex; }
+.grid-container { display: grid; }
+.txt-center { text-align: center; }
+
+ul { list-style-type: none; }
+
+a {
+	text-decoration: none;
+	transition: all 0.3s linear;
+	color: var(--color-primary);
+}
+
+h1, h2, h3, h4, a {
+	font-family: var(--font-primary);
+	font-weight: 400;
+}
+
+
+/***** Style for Header Section *****/
+header.app-header {
+	width: 100%;
+	height: auto;
+	background-color: var(--color-dark);
+	color: var(--color-secondary);
+	padding: 2.5em 0;
+}
+
+h1.app-title {
+	font-size: 2.85rem;
+}
+
+
+/***** Style for App Body *****/
+main.app-body {
+	width: 100%;
+	background-color: var(--color-light);
+	padding: 3em 0;
+}
+
+/***** Style for Calulator *****/
+.calContainer {
+	width: 60%;
+	height: auto;
+	min-height: 690px;
+	margin: 0 auto;
+	padding: 4em 0;
+	background-color: var(--color-text);
+	background: linear-gradient(45deg, #1a1a1a, #4a4a4a);
+	justify-content: center;
+	align-items: center;
+	border-radius: 0.625em;
+	box-shadow:
+		0 4px 8px 0 rgba(0, 0, 0, 45%),
+		0 5px 15px 0 rgba(0, 0, 0, 50%);
+}
+
+.calculator {
+	background: rgba(255, 255, 255, 10%);
+	backdrop-filter: blur(0.65em);
+	padding: 1.25em;
+	border-radius: 1.25em;
+	transform: translateY(-1.25em);
+	animation: slideUp 0.5s ease forwards;
+	box-shadow:
+		0 4px 8px 0 rgba(255, 255, 255, 45%),
+		0 6px 18px 0 rgba(255, 255, 255, 50%);
+}
+
+.displayScreen {
+	background: rgba(0, 0, 0, 20%);
+	padding: 1.25em;
+	margin-bottom: 1.25em;
+	border-radius: 0.65em;
+	text-align: right;
+	position: relative;
+	overflow: hidden;
+}
+
+.previous {
+	color: rgba(255, 255, 255, 40%);
+	font-size: 1.25rem;
+	min-height: 1.5em;
+}
+
+.current {
+	color: var(--color-white);
+	font-size: 2.5rem;
+	margin-top: 0.25em;
+}
+
+.sectionButton {
+	display: grid;
+	grid-template-columns: repeat(4, 1fr);
+	gap: 0.625em;
+}
+
+.sectionButton button {
+	border: none;
+	padding: 1.25em;
+	border-radius: 0.625em;
+	font-size: 1.25rem;
+	cursor: pointer;
+	transition: all 0.3s ease;
+	background: rgba(255, 255, 255, 10%);
+	color: var(--color-light);
+}
+
+.sectionButton button:hover {
+	background-color: var(--color-secondary);
+	transform: translateY(-2px);
+}
+
+.sectionButton button:active {
+	transform: scale(0.95);
+}
+
+.operation {
+    background-color: rgba(255, 165, 0, 30%) !important;
+}
+
+.equals {
+    background-color: rgba(255, 165, 0, 95%) !important;
+    grid-column: span 3;
+}
+
+.ac, .delete {
+    background-color: rgba(255, 0, 0, 30%) !important;
+}
+
+.pop {
+	animation: pop 0.3s ease;
+}
+
+/* Animation */
+@keyframes slideUp {
+	to {
+		transform: translateY(0);
+		opacity: 1;
+	}
+}
+
+@keyframes pop {
+	0%   { transform: scale(1); }
+	50%  { transform: scale(0.95); }
+	100% { transform: scale(1); }
+}
+
+
+/***** Style for Footer Section *****/
+footer.app-footer {
+	width: 100%;
+	padding: 1.5em 0;
+	background-color: var(--color-dark);
+	color: var(--color-whiter);
+}
+
+footer.app-footer p { color: var(--color-light); }
+
+footer.app-footer .grid-container {
+	grid-template-columns: repeat(3, 1fr);
+	justify-content: space-between;
+	align-items: center;
+}
+
+.social-link h3.section-heading {
+	color: var(--color-light);
+	padding: 1em 0;
+	font-weight: 500;
+	font-size: 1.35rem;
+}
+
+.social-links ul {
+	width: 100%;
+	display: grid;
+	grid-template-columns: repeat(3, 30% 1fr);
+}
+
+.social-link ul li { padding: 0 1em; }
+.social-link a {
+	font-size: 1.85rem;
+	color: var(--color-secondary);
+}
+
+.social-link a:hover {
+	color: var(--color-primary);
+}
+
+.copyright,
+.author-text {
+	font-size: 1.25rem;
+}
+
+.author-text .iconHeart { color: tomato; }
+.author-text a.author-link {
+	font-weight: 500;
+	color: var(--color-secondary);
+}
+
+.author-text a.author-link:hover { color: tomato; }
